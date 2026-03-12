@@ -1,4 +1,4 @@
-# Linux渗透测试一般流程（linux独立机）
+title:Linux渗透测试一般流程（linux独立机）
 `# 注意网页端源码`
 1.	**主机发现**
 `ping ip`查看是否连接
