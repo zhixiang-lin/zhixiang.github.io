@@ -1,7 +1,7 @@
 ---
+excerpt: "Linux渗透测试笔记"
 title: "linux笔记"
-excerpt: "Linux渗透测试"
-collection: portfolio
+collection: Linux渗透
 ---
 渗透测试一般流程（linux独立机）
 注意网页端源码
