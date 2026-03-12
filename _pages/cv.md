@@ -386,7 +386,7 @@ dll提权就是我们对于.exe文件没有修改权限，但是对他调用的d
 3. mysql寻找信息`mysql -uroot -proot -e"show databases;"`
 
 4. `whoami /priv`提权信息汇总
-`# 土豆提权`
+`土豆提权`
 ![alt text](image-2.png)
 就比如这里可以使用4.0，3.5，2.0，先用4.0，后3.5，后2.0，用最高的
 ```bash
