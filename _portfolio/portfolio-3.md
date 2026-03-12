@@ -7,9 +7,9 @@ Linux渗透测试一般流程（linux独立机）
 注意网页端源码
 
 主机发现
-ping ip查看是否连接
+`ping ip`查看是否连接
 
-使用arp-scan -l或netdiscover -r发现ip
+使用`arp-scan -l`或`netdiscover -r`发现ip
 
 端口扫描
 
