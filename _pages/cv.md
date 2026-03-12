@@ -399,7 +399,6 @@ https://blog.csdn.net/qq_42699326/article/details/144334216?ops_request_misc=ela
 -------------------------------------------------------------------------------------------
 4.2 SeDebugPrivilege 权限
 输入 whoami /priv 出现SeDebugPrivilege权限，就相当于可以调试其他程序，如果有adminstrator的进程可以调试，就可以进行提权
-```bash
 whoami /priv  # 查看权限
 ps  # 查看进程
 # 几个默认的高权限 比如显示556
