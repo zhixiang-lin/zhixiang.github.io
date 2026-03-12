@@ -333,7 +333,6 @@ john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
 15. **rpcclient工具**
-
 ```bash
 rpcclient -W '' -c querydispinfo -U''%'' '192.168.120.181'  # 列举域内的用户名，`reminder`是密码
 rpcclient -U '' -N IP # 空账号密码访问
