@@ -14,12 +14,9 @@ collection: portfoilo
 
 4.	**nmap扫描**
 ```bash
-Nmap -p- -sS -A --min-rate 1000 ip
-
+nmap -p- -sS -A --min-rate 1000 ip
 nmap -sC -sV -T4 ip
-
 nmap -sU -top-ports=20 10.129.138.95
-
 nmap -sS -sU -sC -sV -O -T4 10.10.11.136
 # 扫描udp
 ```
