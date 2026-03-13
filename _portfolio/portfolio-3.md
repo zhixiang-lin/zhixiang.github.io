@@ -506,7 +506,7 @@ msfvenom -a x86 -p linux/x86/exec CMD=/bin/sh -b '\x00\x09\x0a\x20' -e x86/shika
 ```
 ![alt text](image-6.png)
 
-**gdb本地链接调试**
+5. gdb本地链接调试
 ```bash
 # （set follow-fork-mode child）
 # （set detach-on-fork off） 看情况使用
