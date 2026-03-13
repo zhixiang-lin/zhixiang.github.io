@@ -181,7 +181,7 @@ mount -t nfs 192.168.71.139:/home/user5 nfs
 `proxychains ssh john@192.168.142.145 -t "/bin/sh"`可以执行ssh
 
 **3306**：mysql端口：
-Mysql配置错误攻击
+1. Mysql配置错误攻击
 ```bash
 show variables like 'plugin_dir';
 SHOW VARIABLES LIKE "secure_file_priv";查看信息
