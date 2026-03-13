@@ -621,6 +621,7 @@ alpine              latest              a24bb4013296        3 months ago        
 debian              wheezy              10fcec6d95c4        18 months ago       88.3MB
 docker run -v /:/mnt --rm -it redmine chroot /mnt bash
 # docker run -it -v /:/host debian:wheezy sh
+# https://cloud.tencent.com/developer/article/2092393
 ```
 
 
