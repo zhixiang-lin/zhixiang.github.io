@@ -321,7 +321,7 @@ php://filter/convert.base64-encode/resource=home
 `cat fuzz1.txt|grep -v "Progress"`
 使用**fuff**爆破域名
 
-22. 如果有.git目录，使用**git-dumper**`git-dumper http://dev.linkvortex.htb/.git website/`下载  
+22. 如果有.git目录，使用**git-dumper**`git-dumper http://dev.linkvortex.htb/.git website/`下载，在website目录下使用`git log`查看历史，在使用`git commit(数字)`进行查看信息 
  
 23. `echo -n a235561351813137123456 | md5sum`
 生成盐值为 `a235561351813137`的`123456`的密文md5    
