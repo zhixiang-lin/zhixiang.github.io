@@ -371,6 +371,7 @@ whoami /groups #查看组
 Get-ADDomain
 net user username
 cmdkey /list # 查看电脑上存在的凭证
+systeminfo
 ```
 
 1. powershell日志获取，如果使用了powershell，一定会有日志，去powershell目录底下寻找。
