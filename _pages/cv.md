@@ -133,7 +133,7 @@ mget *
 
 3. 如果中间有空格，使用`smbclient \\\\192.168.204.175\\Password\ Audit -U 'V.Ventz%HotelCalifornia194!'`进行登陆
 
-4.`nmap -T4 -p445 --script smb-vuln* 192.168.212.40`扫描漏洞 
+4. `nmap -T4 -p445 --script smb-vuln* 192.168.212.40`扫描漏洞 
 
 **3128端口**：Squid 是一个缓存和转发的 HTTP 网络代理。它有多种用途，包括通过缓存重复请求来加速 web 服务器，为共享网络资源的一组人缓存。使用spose.py,`python spose.py --proxy http://192.168.159.189:3128 --target 192.168.159.189`,这里的proxy和target都是靶机目标ip
 
