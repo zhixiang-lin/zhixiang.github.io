@@ -135,7 +135,7 @@ mget *
 
 4. `nmap -T4 -p445 --script smb-vuln* 192.168.212.40`扫描漏洞 
 
-**3128端口**：Squid 是一个缓存和转发的 HTTP 网络代理。它有多种用途，包括通过缓存重复请求来加速 web 服务器，为共享网络资源的一组人缓存。使用spose.py,`python spose.py --proxy http://192.168.159.189:3128 --target 192.168.159.189`,这里的proxy和target都是靶机目标ip
+**3128端口**：Squid 是一个缓存和转发的 HTTP 网络代理。它有多种用途，包括通过缓存重复请求来加速 web 服务器，为共享网络资源的一组人缓存。使用spose.py,`python spose.py --proxy http://192.168.159.189:3128 --target 192.168.159.189`,这里的proxy和target都是靶机目标ip,然后在浏览器里settings里更改proxy，然后就可以访问
 
 **5222端口**：XMPP端口，使用pidgin，移步至工具查找使用方法
 
