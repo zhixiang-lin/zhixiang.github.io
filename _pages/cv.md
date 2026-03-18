@@ -288,7 +288,7 @@ impacket-smbserver share ./
 ```
 
 8. **cadaver**
-`cadaver http://ip/`
+`cadaver http://ip/`,然后输入账号密码，可以上传文件，使用put上传
 
 9. **powershell**
 `powershell -ep bypass`可以进入powershell环境
