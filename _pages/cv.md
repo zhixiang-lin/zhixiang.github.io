@@ -635,7 +635,7 @@ cat .bash_history
 # 接下来就是Linux的信息
 ```
 
-24. 修复会话，先使用`echo %PATH%`查看是否包含System32，没有的话使用`set PATH=%PATH%;C:\Windows\System32`修复
+24. 修复会话，先使用`echo %PATH%`查看是否包含System32，没有的话使用`set PATH=%PATH%;C:\Windows\System32`修复，或`set PATH=%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\system32\windowspowershell\v1.0\;`修复
 
 25. 在.xml文件中找到加密的密码，使用如下方法解密
 ```bash
