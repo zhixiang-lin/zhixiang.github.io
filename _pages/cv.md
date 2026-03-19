@@ -44,7 +44,7 @@ redirect_from:
 
 4. `enum4linux -a -o 域名`枚举，或`enum4linux-ng ip`枚举
 
-5. `curl -X POST http://169.254.177.99:33333/list-current-deployments`直接使用POST访问
+5. `curl -X POST -H 'Content-Length:0' http://169.254.177.99:33333/list-current-deployments`直接使用POST访问
 
 6. 无法访问隐藏文件，按`ctrl+F`local
 
