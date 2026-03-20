@@ -75,7 +75,7 @@ POST 请求的表单数据
 
 13. Outlook文件使用readpst，mbox文件使用less
 
-14. 如果可以上传.htaccess文件，上传文件内容为`AddType application/x-httpd-php .evil`,然后在上传~/windowstool/wwwolf-php-webshell/webshell.evil
+14. 如果可以上传.htaccess文件，上传文件内容为`AddType application/x-httpd-php .evil`,然后在上传~/windowstool/wwwolf-php-webshell/webshell.php.evil
 
 **143端口**：
 1. 电子邮件枚举，IMAP服务
