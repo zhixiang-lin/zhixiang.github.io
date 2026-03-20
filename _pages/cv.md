@@ -239,6 +239,7 @@ cd ~/Desktop/windowstool/bloodhound/BloodHound-linux-x64
 PS: uploads sharphound.exe
 PS: ./sharphound.exe -c All
 PS: downloads asd.zip
+Node Info -> OUTBOUND OBJECT CONTROL -> First Degree Object 
 ```
 
 4. **openssl工具**破解.pfx文件
